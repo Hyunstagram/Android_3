@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">part_3</string>
+
+    <string name="title_intent">Intent List</string>
+    <string name="nothing_intent">NOTHING</string>
+    <string-array name="list_intent">
+        <item>GO</item>
+        <item>GO WITH DATA</item>
+        <item>GO WITH OBJECT</item>
+    </string-array>
+</resources>
