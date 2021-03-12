@@ -7,5 +7,6 @@
         <item>GO</item>
         <item>GO WITH DATA</item>
         <item>GO WITH OBJECT</item>
+        <item>GO WITH BACK</item>
     </string-array>
 </resources>

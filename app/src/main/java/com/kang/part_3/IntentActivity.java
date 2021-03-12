@@ -7,7 +7,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
@@ -35,6 +37,22 @@ public class IntentActivity extends AppCompatActivity implements AdapterView.OnI
         setContentView(R.layout.layout_intent);
 
         init();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        switch (requestCode){
+            case AppConstant.REQ_DATA_CODE:
+                if(resultCode==RESULT_OK){
+                    Log.i(TAG,"ok "+ data.getStringExtra(AppConstant.KEY_PHONE));
+                }
+                else{
+                    Toast.makeText(this,"Fail", Toast.LENGTH_SHORT).show();
+                }
+                break;
+        }
     }
 
     // Member Method - Custom
@@ -83,6 +101,10 @@ public class IntentActivity extends AppCompatActivity implements AdapterView.OnI
                 intent = new Intent(IntentActivity.this, GoObjectActivity.class);
                 intent.putExtra(AppConstant.KEY_PERSONS, persons);
                 startActivity(intent);
+                break;
+            case AppConstant.ITEM_GO_BACK:
+                intent = new Intent(IntentActivity.this, GoBackActivity.class);
+                startActivityForResult(intent, AppConstant.REQ_DATA_CODE);
                 break;
         }
     }

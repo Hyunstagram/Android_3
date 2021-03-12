@@ -13,4 +13,6 @@ public class AppConstant {
     public static final String KEY_NAMES = "NAMES";
     public static final String KEY_PERSON = "PERSON";
     public static final String KEY_PERSONS = "PERSONS";
+
+    public static final int REQ_DATA_CODE = 1;
 }

@@ -18,6 +18,7 @@
         </activity>
         <activity android:name=".GoActivity"/>
         <activity android:name=".GoObjectActivity"/>
+        <activity android:name=".GoBackActivity"/>
     </application>
 
 </manifest>
