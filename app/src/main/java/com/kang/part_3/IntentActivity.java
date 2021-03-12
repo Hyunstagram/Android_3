@@ -74,6 +74,16 @@ public class IntentActivity extends AppCompatActivity implements AdapterView.OnI
                 intent.putExtra(AppConstant.KEY_NAMES, names);
                 startActivity(intent);
                 break;
+            case AppConstant.ITEM_GO_WITH_OBJECT:
+                ArrayList<Person> persons = new ArrayList<Person>();
+                persons.add(new Person("Tom", "F", 10));
+                persons.add(new Person("Lee", "F", 35));
+                persons.add(new Person("Choi", "M", 14));
+
+                intent = new Intent(IntentActivity.this, GoObjectActivity.class);
+                intent.putExtra(AppConstant.KEY_PERSONS, persons);
+                startActivity(intent);
+                break;
         }
     }
 }

@@ -11,4 +11,6 @@ public class AppConstant {
     public static final String KEY_NAME = "NAME";
     public static final String KEY_PHONE = "PHONE";
     public static final String KEY_NAMES = "NAMES";
+    public static final String KEY_PERSON = "PERSON";
+    public static final String KEY_PERSONS = "PERSONS";
 }

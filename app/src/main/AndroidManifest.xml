@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".GoActivity"/>
+        <activity android:name=".GoObjectActivity"/>
     </application>
 
 </manifest>
